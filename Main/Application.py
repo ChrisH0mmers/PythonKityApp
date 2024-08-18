@@ -1,8 +1,18 @@
 from kivy.app import App
-from kivy.uix.label import Label
+from kivy.uix.boxlayout import BoxLayout
+
+
+class MyBoxLayout(BoxLayout):
+    def OnSubmit(self):
+        TextInput = self.ids.TextInput
+        InputText = TextInput.text
+        OutputLabel = self.ids.OutputLabel
+        OutputLabel.text = InputText
+        TextInput.text = ""
 
 class Shopping(App):
-    pass
+    def build(self):
+        return MyBoxLayout()
 
 
 
