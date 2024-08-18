@@ -45,7 +45,7 @@ class Shopping(App):
     
 
     def callback(self, instance):
-        self.greeting.text = "Hello " + self.user.text + "!"
+        self.greeting.text = "Welcome to my app, " + self.user.text + "!"
         
 
 
